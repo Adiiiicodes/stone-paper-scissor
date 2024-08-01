@@ -19,7 +19,7 @@ function permission() {
         console.log("Lets start")
     } else if (perm=='no' || perm=='No' || perm=='NO' || perm=='nO') {
         Instructions()
-        perm = prompt("Are you ready ?  yes or no : ");
+        perm = prompt("Are you ready ? yes or no : ");
         permission()
     } else{
         console.log("ERROR")
@@ -37,42 +37,44 @@ permission();
 space();
 
 let ch = prompt("How Many turns do you want to play ? ")
+ch = parseInt(ch)
 space();
 let i,mp=0,yp=0;
 mp =parseInt(mp)
 yp =parseInt(yp)
-let x = getRandom()
+
 
 for(i=0; i<ch; i++) {
+    let x = getRandom()
 console.log(" *******PLEASE TURN ON CAPS LOCK******")
 let u = prompt("your turn : ")
 
-console.log("mine is " + u)
+console.log("mine is " + x)
 space();
 
-    if(x=='S' && u=='S') {
+    if(x==='S' && u==='S') {
         console.log("tie")
-    } else if (x=='P'&&u=='P') {
+    } else if (x==='P'&&u==='P') {
         console.log("tie")
-    } else if (x=='K'&&u=='K') {
+    } else if (x==='K'&&u==='K') {
         console.log("tie")
     }
-     else if (x=='S' && u=='P') {
+     else if (x==='S' && u==='P') {
         console.log("Your Point")
         yp++
-    } else if (x=='S' && u=='K') {
+    } else if (x==='S' && u==='K') {
         console.log("My point")
         mp++
-    } else if (x=='P' && u=='S') {
+    } else if (x==='P' && u==='S') {
         console.log("My point")
         mp++
-    } else if(x=='P' && u=='K') {
+    } else if(x==='P' && u==='K') {
           console.log("Your Point")
           yp++
-    } else if (x=='K' && u=='S') {
+    } else if (x==='K' && u==='S') {
         console.log("Your Point")
         yp++
-    } else if (x=='K' && u=='P') {
+    } else if (x==='K' && u==='P') {
         console.log("My Point")
         mp++
     }
@@ -82,7 +84,7 @@ space();
 console.log(`The final Points are - \nmine: ${mp} \nYours : ${yp}`);
 
 if(yp>mp) {
-    console.log("You are the WINNER , I'LL sE YOU NEXT TIME 🌚")
+    console.log("You are the WINNER , I'LL see YOU NEXT TIME 🌚")
 } else if(yp<mp) {
     console.log("Huuh !! loooserrrrrrrrr !!!!!")
 } else{
