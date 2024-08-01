@@ -1,0 +1,68 @@
+const prompt = require('prompt-sync')();
+
+const chars = ['s', 'p', 'k'];
+
+// Functions start
+function getRandom() {
+  return chars[Math.floor(Math.random() * chars.length)];
+}
+
+function space() {
+  console.log('\n');
+}
+
+function Instructions() {
+  console.log("some Instructions to play : ");
+  console.log(" S for stone, P for Paper, K for scissors ");
+}
+
+function permission() {
+  const input = prompt("Are you ready? yes or no: ").toLowerCase();
+  if (input === 'yes') {
+    console.log("Lets start");
+  } else if (input === 'no') {
+    Instructions();
+    permission();
+  } else {
+    console.log("ERROR: Please enter 'yes' or 'no'.");
+  }
+}
+
+// Functions end
+console.log("WELCOME TO STONE🪨,PAPER📝 SICSSOR✂️");
+space();
+Instructions();
+space();
+permission();
+space();
+
+let ch = parseInt(prompt("How Many turns do you want to play? "));
+space();
+let mp = 0, yp = 0;
+let x = getRandom();
+
+for (let i = 0; i < ch; i++) {
+  let u = prompt("your turn: ").toLowerCase();
+  console.log("mine is " + x);
+  space();
+
+  if (x === u) {
+    console.log("tie");
+  } else if ((x === 's' && u === 'p') || (x === 'p' && u === 'k') || (x === 'k' && u === 's')) {
+    console.log("Your Point");
+    yp++;
+  } else {
+    console.log("My point");
+    mp++;
+  }
+}
+
+console.log(`The final Points are - \nmine: ${mp} \nYours : ${yp}`);
+
+if (yp > mp) {
+  console.log("You are the WINNER , I'LL sE YOU NEXT TIME 🌚");
+} else if (yp < mp) {
+  console.log("Huuh !! loooserrrrrrrrr !!!!!");
+} else {
+  console.log("You should try again, you can't defeat me 🥱");
+}
