@@ -1,7 +1,4 @@
 # stone-paper-scissor
-Here's an updated description with the additional instruction:
-
----
 
 ### 🪨 Stone, Paper, Scissors Game 📝✂️
 
@@ -29,8 +26,4 @@ This is not just your ordinary Rock, Paper, Scissors game—this is *Stone, Pape
 
 This is a project that combines the thrill of classic games with the frustration of losing to a computer that has no idea what it's doing. It’s a fun way to practice your JavaScript skills, or just to pass the time when you’re bored and feel like pretending to be productive.
 
-So go ahead, clone the repo, run `npm install prompt-sync`, and see if you can outsmart my code. But be warned—you might just end up shouting "looooooooserrrrrrrrr!" at your screen.
-
----
-
-This should give your project a fun and informative description while making sure users know how to set it up properly!
+So go ahead, clone the repo, run `npm install prompt-sync`, and see if you can outsmart my code. But be warned—you might just end up shouting "looooooooserrrrrrrrr!" at your screen!
